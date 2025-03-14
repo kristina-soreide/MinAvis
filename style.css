@@ -10,43 +10,27 @@ img{
 /* minimal ccs reset*/
 
 
-nav {
-    display: flex;
-    justify-content: space-around;
-    /* Vi bruker position fixed for at navbar alltid skal synes i toppen */
-    position: fixed;
-    width: 100%;
-    top: 0;
-    /* Pass på at navbaren ligger "over" annet innhold med z-index */
-    z-index: 1;
+.container{
+    max-width: 100%;
+    display: grid;
+    grid-template-columns: repeat(12,1fr);
+    gap: 3px;
 }
 
-nav {
-    background-color: aliceblue;
+article{
+    background-color: bisque;
+    grid-column: span 3;
 }
 
-nav a,
-nav button {
-    background-color: inherit;
-    color: darkblue;
-    text-decoration: none;
-    font-size: 30px;
-    padding: 20px;
-    border: none;
-    font-family: Arial, Helvetica, sans-serif;
+article.small{
+    grid-column: span 3;
 }
-
-.dropdown-content {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    background-color: antiquewhite;
-    padding: 20px;
-    margin-left: 20px;
-    margin-top: -10px;
+article.medium{
+    grid-column: span 7;
 }
-
-.dropdown-content a {
-    font-size: 18px;
-    padding: 5px;
+article.large{
+    grid-column: span 9;
+}
+article.xlarge{
+    grid-column: span 12;
 }
